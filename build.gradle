@@ -1,0 +1,19 @@
+task build {
+    doLast {
+        println 'Successful: all unit tests passed'
+    }
+}
+
+task publish(dependsOn: 'build') {
+    doLast {
+        println 'Successful: published artifacts to artifact repository'
+    }
+}
+
+task acceptanceTests {
+    doLast {
+        println 'Successful: all acceptance tests passed'
+    }
+}
+
+task clean {}
